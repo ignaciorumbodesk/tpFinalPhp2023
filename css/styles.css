@@ -1,0 +1,13 @@
+form button {
+  cursor: pointer;
+  background-color: transparent;
+  border: solid 2px hsl(251, 76%, 31%);
+  width: fit-content;
+  display: block;
+  margin: 20px auto;
+  padding: 10px 22px;
+  font-size: 16px;
+  color: hsl(246, 59%, 40%);
+  position: relative;
+  z-index: 10;
+}
