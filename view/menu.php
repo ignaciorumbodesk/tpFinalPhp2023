@@ -11,7 +11,7 @@
                 Usuarios
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="agregarUsuario.php">Agregar usuario</a></li>
+                <li><a class="dropdown-item" href="agregarUsuario.php?mensaje=">Agregar usuario</a></li>
                 <li><a class="dropdown-item" href="listadoUsuarios.php">Mostrar usuarios</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Something else here</a></li>

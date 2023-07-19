@@ -8,9 +8,13 @@
   </head>
   <body>
     <?php
-      require_once("menu.html");
+      require_once("menu.php");
     ?>
-    <h1>Hello, world!</h1>
+    <div class="container">
+      <div class="text-center">
+        <h2>Bienvenidos al gestor de usuarios</h2>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
 </html>

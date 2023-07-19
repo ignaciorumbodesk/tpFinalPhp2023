@@ -13,24 +13,24 @@
 
 <body>
   <?php
-  require_once("menu.html");
+  require_once("menu.php");
   ?>
   <h3 class="text-center fs-3">Agregar un usuario.</h3>
 
   <div class="d-flex justify-content-center">
     <form action="../controller/agregarUsuario.php" method="post">
       <div class="input-group mb-3 flex-nowrap">
-        <input type="text" name="user" class="form-control" id="nombreDeUsuario" placeholder="Nombre de usuario" aria-label="Recipient's username"
+        <input type="text" name="user" class="form-control" id="user" placeholder="Nombre de usuario" aria-label="Recipient's username"
           aria-describedby="basic-addon2" onkeyup="validarUsuario()" required>
         <span class="input-group-text" id="basic-addon2">@ejemplo.com</span>
       </div>
       <div class="input-group mb-3 flex-nowrap">
-        <input type="password" name="pass" class="form-control" id="passwordDeUsuario" placeholder="Password, puede usar numeros, mayusculas, etc" 
+        <input type="password" name="pass" class="form-control" id="passw" placeholder="Password, puede usar numeros, mayusculas, etc" 
         aria-label="Recipient's username" onkeyup="defFortaleza()" aria-describedby="basic-addon2" requiered>
         <span class="input-group-text" id="basic-addon2">P@ssw0rd</span>
       </div>
       <div class="input-group mb-3 flex-nowrap">
-        <input type="password" class="form-control" id="comparaPassword" placeholder="Repita su Password" aria-label="Recipient's username"
+        <input type="password" class="form-control" id="comparaPassw" placeholder="Repita su Password" aria-label="Recipient's username"
           onkeyup="compararPass()" aria-describedby="basic-addon2" requiered>
         <span class="input-group-text" id="basic-addon2">P@ssw0rd</span>
       </div>
@@ -40,6 +40,15 @@
       <div id="mensaje"></div>
     </form>
   </div>
+  <?php
+    $mensaje = $_GET["mensaje"];
+    if ($mensaje != "") {
+      echo "<div class='text-danger text-center m-2'>";
+      echo $mensaje;
+      echo "</div>";
+    } else {
+    }
+  ?>
 
 
 

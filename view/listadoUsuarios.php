@@ -9,12 +9,9 @@
   </head>
   <body>
     <?php
-      require_once("menu.html");
+      require_once("menu.php");
     ?>
     <h3 class="text-center fs-3">Listado de usuarios traidos desde la DB.</h3> 
-    <div class="container">
-      <a href="agregarUsuario.php" class="btn btn-primary">Agregar usuario</a>
-    </div>
   <div class="container">
     <table class="table">
       <thead>
@@ -45,20 +42,25 @@
           for ($i=0; $i < $cantidadUsuarios; $i++) { 
             echo "<tr>";
               echo "<td>";
-              echo $listUsuarios[$i]["id"];
+
+               $idUser = $listUsuarios[$i]["id"];
+              echo $idUser;
               echo "</td>";
 
               echo "<td>";
-              echo $listUsuarios[$i]["usuario"];
+               $user = $listUsuarios[$i]["usuario"];
+              echo $user;
               echo "</td>";
 
               echo "<td>";
-              echo $listUsuarios[$i]["password"];
+               $pass=$listUsuarios[$i]["passw"];
+              
               echo "</td>";
 
               echo "<td>";
-              echo "<a href='editar.php'><i class='bi bi-pencil-fill'></i></a>";
-              echo "<i class='bi bi-trash3-fill' onclick='eliminar()'></i>";
+              echo "<a href='editar.php?id=$idUser&mensaje='><i class='bi bi-pencil-fill m-1'></i></a>";
+            //al hacer click en el enlace, se envian al modal los datos de idUser y user 
+              echo "<a href='#' data-bs-toggle='modal' data-bs-target='#delModal' idUsuario='$idUser' usuario='$user'><i class='bi bi-trash3-fill' onclick='eliminar()'></i></a>";
               echo "</td>";
             echo "</tr>";     
           }
@@ -67,6 +69,28 @@
       </tbody>
     </table>
   </div>
+  <div class="modal fade" id="delModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminación de Usuario</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          <!-- mediante POST enviamos los datos en un input hidden -->
+            <form action="../controller/delUsuario.php" method="post">
+                <input type="hidden" name="idUser" id="idUser">
+                <div class="modal-body text-center">
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label  fs-6">¿Desea eliminar el usuario?</label>
+                            <div id="datosUser" class="text-danger"></div>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <input type="submit" value="Eliminar" class="btn btn-primary">
+                    
+                </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src=" js/listUsu.js"></script>
   </body>
 </html>

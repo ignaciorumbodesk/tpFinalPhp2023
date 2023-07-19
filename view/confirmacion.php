@@ -8,7 +8,7 @@
   </head>
   <body>
     <?php
-     require_once("menu.html");
+     require_once("menu.php");
     ?>
     <div class="container">
       <div class="text-center fs-4 bg-success">Confirmacion</div>
