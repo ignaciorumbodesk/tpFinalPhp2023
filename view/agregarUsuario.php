@@ -30,7 +30,7 @@
         <span class="input-group-text" id="basic-addon2">P@ssw0rd</span>
       </div>
       <div class="input-group mb-3 flex-nowrap">
-        <input type="password" class="form-control" id="comparaPassw" placeholder="Repita su Password" aria-label="Recipient's username"
+        <input type="password" class="form-control" id="comparaPassword" placeholder="Repita su Password" aria-label="Recipient's username"
           onkeyup="compararPass()" aria-describedby="basic-addon2" requiered>
         <span class="input-group-text" id="basic-addon2">P@ssw0rd</span>
       </div>

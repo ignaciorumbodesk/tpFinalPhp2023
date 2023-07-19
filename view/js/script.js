@@ -2,7 +2,7 @@ function validarUsuario() {
   console.log("ingreso validar usuario")
 
   // SE ALMACENA EN LET USER EL ELEMENTO QUE TRAEMOS X ID
-  let user=document.getElementById("nombreDeUsuario").value
+  let user=document.getElementById("user").value
   console.log(`user: ${user}`)
 
   console.log(user.includes("@"))
@@ -25,7 +25,7 @@ function defFortaleza() {
   const baja=4
   const media=8
   
-  let pass=document.getElementById("passwordDeUsuario").value
+  let pass=document.getElementById("passw").value
 
 
   // const regex= new RegExp("(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}")
@@ -43,7 +43,7 @@ function defFortaleza() {
 // verifica que la pass y la rep pass sean iguales
 function compararPass() {
   let repPass=document.getElementById("comparaPassword").value
-  let pass=document.getElementById("passwordDeUsuario").value
+  let pass=document.getElementById("passw").value
 
   if (repPass!=pass) {
       document.getElementById("mensaje").innerHTML="La contraseñas no coinciden"        

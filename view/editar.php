@@ -40,12 +40,12 @@
     <form action="../controller/editUsuario.php" method="POST">
       <input type="hidden" name="id" value="<?php echo $id;?>">
       <div class="input-group mb-3 flex-nowrap">
-        <input type="text" name="user" class="form-control" id="nombreDeUsuario" placeholder="Nombre de usuario" aria-label="Recipient's username"
+        <input type="text" name="user" class="form-control" id="user" placeholder="Nombre de usuario" aria-label="Recipient's username"
           aria-describedby="basic-addon2" onkeyup="validarUsuario()" value="<?php echo $user;?>" required>
         <span class="input-group-text" id="basic-addon2">@ejemplo.com</span>
       </div>
       <div class="input-group mb-3 flex-nowrap">
-        <input type="password" name="passw" class="form-control" id="passwordDeUsuario" placeholder="Password, puede usar numeros, mayusculas, etc" 
+        <input type="password" name="passw" class="form-control" id="passw" placeholder="Password, puede usar numeros, mayusculas, etc" 
         aria-label="Recipient's username" onkeyup="defFortaleza()" aria-describedby="basic-addon2" value="<?php echo $pass;?>" requiered>
         <span class="input-group-text" id="basic-addon2">P@ssw0rd</span>
       </div>
